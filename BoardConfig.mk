@@ -20,6 +20,10 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
+# IR
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.ir-V1-ndk.so:$(TARGET_COPY_OUT_ODM)/lib64/android.hardware.ir-V1-ndk.so
+
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/oplus/aston.config
 
