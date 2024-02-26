@@ -16,7 +16,17 @@ TARGET_OTA_ASSERT_DEVICE := OP5D35L1
 TARGET_SCREEN_DENSITY := 450
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/oplus/aston.config
+#TARGET_KERNEL_CONFIG += vendor/oplus/aston.config
+
+#KERNEL_MODULE_DIR := $(DEVICE_PATH)-kernel/modules
+
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbs/dtbo.img
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor_dlkm/,$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules) \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
