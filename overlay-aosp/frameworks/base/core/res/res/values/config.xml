@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015-2016 The CyanogenMod Project
+                   2017-2021 The LineageOS Project
+                   2023-2024 PixelOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Whether devices supports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
+</resources>
