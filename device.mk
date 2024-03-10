@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2376
 TARGET_SCREEN_WIDTH := 1080
 
+# Display
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.brightness.low.gamma=true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosp \
