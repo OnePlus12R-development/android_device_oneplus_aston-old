@@ -24,6 +24,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.brightness.low.gamma=true
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display_id_4630946728207028354.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946728207028354.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosp \
