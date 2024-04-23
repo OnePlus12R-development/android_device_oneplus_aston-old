@@ -39,3 +39,6 @@ $(call inherit-product, device/oneplus/sm8550-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/aston/aston-vendor.mk)
+
+# Inherit gapps from vendor/gapps
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
