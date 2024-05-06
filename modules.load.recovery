@@ -216,6 +216,7 @@ repeater-qti-pmic-eusb2.ko
 repeater-i2c-eusb2.ko
 redriver.ko
 nb7vpq904m.ko
+oplus_bsp_tp_comon.ko
 oplus_bsp_tp_custom.ko
 oplus_bsp_tp_notify.ko
 pm8941-pwrkey.ko
